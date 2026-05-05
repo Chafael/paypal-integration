@@ -4,7 +4,3 @@ export const errorHandler = (err: Error, _req: Request, res: Response, _next: Ne
   console.error(err.stack);
   res.status(500).json({ error: 'Error interno del servidor' });
 };
-
-function testError() {
-  console.trace('Error tracking');
-}
