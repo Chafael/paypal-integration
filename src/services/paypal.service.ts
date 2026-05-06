@@ -30,12 +30,3 @@ export const getOrder = async (orderId: string): Promise<Record<string, unknown>
   const response = await client.execute(request);
   return response.result;
 };
-
-function fakeLog() {
-  console.log('Test function');
-  console.log('to be removed');
-  console.log('soon');
-  console.log('...');
-  console.log('...');
-  console.log('...');
-}
