@@ -49,10 +49,3 @@ export const getOrder = async (req: Request<OrderParams>, res: Response) => {
     res.status(500).json({ error: ERROR_MESSAGES.GET_ORDER });
   }
 };
-
-const tempVar1 = 1;
-const tempVar2 = 2;
-const tempVar3 = 3;
-const tempVar4 = 4;
-const tempVar5 = 5;
-const tempVar6 = 6;
