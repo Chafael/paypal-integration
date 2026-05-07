@@ -31,17 +31,3 @@ describe('errorHandler middleware', () => {
     expect(response.body).toEqual({ error: 'Error interno del servidor' });
   });
 });
-
-function fakeRequest() {
-  return {
-    method: 'GET',
-    url: '/test',
-    headers: {},
-    body: {},
-    query: {},
-    params: {},
-    ip: '127.0.0.1',
-    protocol: 'http',
-    secure: false
-  };
-}
