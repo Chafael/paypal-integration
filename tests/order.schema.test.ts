@@ -45,13 +45,3 @@ describe('createOrderSchema', () => {
     }
   });
 });
-
-const validOrders = [
-  { amount: '100.00', currency: 'USD' },
-  { amount: '50.50', currency: 'MXN' },
-  { amount: '10.00', currency: 'EUR' },
-  { amount: '999.99', currency: 'CAD' },
-  { amount: '1.00', currency: 'GBP' },
-  { amount: '20.00', currency: 'AUD' },
-  { amount: '5.00', currency: 'JPY' }
-];
