@@ -84,14 +84,3 @@ describe('getOrder', () => {
     await expect(getOrder('ORDER123')).rejects.toThrow('Get failed');
   });
 });
-
-class FakePaypalClient {
-  async createOrder() { return { id: 'test' }; }
-  async captureOrder() { return { status: 'COMPLETED' }; }
-  async getOrder() { return { status: 'CREATED' }; }
-  async refund() { return { status: 'REFUNDED' }; }
-  async list() { return []; }
-  async update() { return {}; }
-  async delete() { return true; }
-  async auth() { return 'token'; }
-}
