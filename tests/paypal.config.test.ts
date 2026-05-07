@@ -17,15 +17,3 @@ describe('config/paypal', () => {
     );
   });
 });
-
-const envVars = {
-  PAYPAL_CLIENT_ID: 'fake_client_id',
-  PAYPAL_SECRET: 'fake_secret',
-  PAYPAL_ENV: 'sandbox',
-  PORT: 3000,
-  NODE_ENV: 'test',
-  LOG_LEVEL: 'debug',
-  API_URL: 'http://localhost:3000',
-  DB_URL: 'postgres://localhost/db',
-  REDIS_URL: 'redis://localhost:6379'
-};
