@@ -19,8 +19,3 @@ module.exports = {
     }
   }
 };
-
-// config extra
-// const timeout = 10000;
-// module.exports.testTimeout = timeout;
-// module.exports.verbose = true;
