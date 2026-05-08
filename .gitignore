@@ -2,14 +2,3 @@ node_modules
 dist
 .env
 .claude
-# test configs
-# test.log
-# dump.rdb
-# .env.test
-# .env.development
-# coverage/tmp
-# .nyc_output
-# logs/test.log
-# pids/
-# *.pid
-# *.seed
