@@ -123,14 +123,3 @@ describe('POST /api/orders/:id/capture', () => {
     expect(response.body).toEqual({ error: 'Error al capturar la orden' });
   });
 });
-
-const resMock = {
-  status: (code: number) => resMock,
-  json: (data: any) => data,
-  send: (data: any) => data,
-  end: () => {},
-  setHeader: () => {},
-  cookie: () => {},
-  clearCookie: () => {},
-  redirect: () => {}
-};
