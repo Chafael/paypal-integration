@@ -99,15 +99,115 @@ http://localhost:3000
 
 **Verificar que el servidor esta corriendo**
 
+```bash
+curl http://localhost:3000/health
+```
 
-## Notas temporales
-1. revisar api
-2. revisar sdk
-3. revisar ts
-4. revisar zod
-5. revisar jest
-6. revisar supertest
-7. revisar dotenv
-8. revisar docker
-9. revisar compose
-10. revisar git
+Respuesta esperada:
+
+```json
+{
+  "status": "ok",
+  "message": "API funcionando correctamente"
+}
+```
+
+---
+
+### Scripts disponibles
+
+| Comando         | Descripcion                                      |
+|-----------------|--------------------------------------------------|
+| `npm run dev`   | Inicia el servidor en desarrollo con ts-node     |
+| `npm run build` | Compila TypeScript a JavaScript en `/dist`       |
+| `npm start`     | Inicia el servidor compilado desde `/dist`       |
+| `npm test`      | Ejecuta las pruebas con cobertura                |
+
+**Para produccion:**
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## Docker
+
+Puedes ejecutar la API dentro de un contenedor sin instalar Node.js localmente.
+
+> **Requisito previo:** El archivo `.env` debe existir en la raiz del proyecto antes de ejecutar cualquier comando de Docker.
+
+**1. Construir la imagen**
+
+```bash
+docker build -t paypal-payments-api .
+```
+
+**2. Levantar con docker-compose (recomendado)**
+
+```bash
+docker-compose up --build
+```
+
+**3. Levantar en background**
+
+```bash
+docker-compose up -d --build
+```
+
+**4. Detener los contenedores**
+
+```bash
+docker-compose down
+```
+
+El servidor estara disponible en `http://localhost:3000`.
+
+---
+
+
+## Endpoints
+
+La URL base de todos los endpoints es `/api`.
+
+---
+
+### Crear una orden
+
+```
+POST /api/orders
+```
+
+**Body (JSON):**
+
+```json
+{
+  "amount": "100.00",
+  "currency": "MXN"
+}
+```
+
+| Campo      | Tipo   | Requerido | Validacion                                              |
+|------------|--------|-----------|----------------------------------------------------------|
+| `amount`   | string | Si        | Numero valido con hasta 2 decimales (ej. `100`, `99.99`) |
+| `currency` | string | No        | Exactamente 3 letras (ej. `MXN`, `USD`). Default: `MXN` |
+
+**Respuesta exitosa — 201 Created:**
+
+```json
+{
+  "id": "7HC89012BG123456X",
+  "status": "CREATED",
+
+## Bug knowns
+- bug1
+- bug2
+- bug3
+- bug4
+- bug5
+- bug6
+- bug7
+- bug8
+- bug9
+- bug10
